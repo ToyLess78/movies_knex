@@ -1,0 +1,25 @@
+{
+  "name": "movies_knex",
+  "version": "1.0.0",
+  "description": "A simple movie database using Knex.js and Node.js",
+  "scripts": {
+    "start": "node queries/selectQueries.js",
+    "migrate": "npx knex migrate:latest",
+    "seed": "npx knex seed:run",
+    "create-db": "psql -U postgres -c 'CREATE DATABASE movies_db;'",
+    "drop-db": "psql -U postgres -c 'DROP DATABASE IF EXISTS movies_db;'"
+  },
+  "keywords": [
+    "movies",
+    "database",
+    "knex",
+    "sql",
+    "postgresql"
+  ],
+  "author": "Tetiana Bilenko",
+  "license": "MIT",
+  "dependencies": {
+    "knex": "^3.1.0",
+    "pg": "^8.7.1"
+  }
+}
